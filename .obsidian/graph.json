@@ -8,45 +8,129 @@
   "collapse-color-groups": true,
   "colorGroups": [
     {
-      "query": "tag:этап1",
+      "query": "tag:#done tag:#этап1  ",
       "color": {
         "a": 1,
-        "rgb": 14701138
+        "rgb": 52224
       }
     },
     {
-      "query": "tag:этап2",
+      "query": "tag:#draft tag:#этап1  ",
       "color": {
         "a": 1,
-        "rgb": 14725458
+        "rgb": 3794233
       }
     },
     {
-      "query": "tag:этап3",
+      "query": "tag:#todo tag:#этап1  ",
       "color": {
         "a": 1,
-        "rgb": 11657298
+        "rgb": 8388479
       }
     },
     {
-      "query": "tag:этап4",
+      "query": "tag:#done tag:#этап2  ",
       "color": {
         "a": 1,
-        "rgb": 5431378
+        "rgb": 5360640
       }
     },
     {
-      "query": "tag:этап5",
+      "query": "tag:#draft tag:#этап2  ",
       "color": {
         "a": 1,
-        "rgb": 5431473
+        "rgb": 8316217
       }
     },
     {
-      "query": "tag:этап6",
+      "query": "tag:#todo tag:#этап2  ",
       "color": {
         "a": 1,
-        "rgb": 5419488
+        "rgb": 11730815
+      }
+    },
+    {
+      "query": "tag:#done tag:#этап3  ",
+      "color": {
+        "a": 1,
+        "rgb": 10734592
+      }
+    },
+    {
+      "query": "tag:#draft tag:#этап3  ",
+      "color": {
+        "a": 1,
+        "rgb": 12838201
+      }
+    },
+    {
+      "query": "tag:#todo tag:#этап3  ",
+      "color": {
+        "a": 1,
+        "rgb": 15073151
+      }
+    },
+    {
+      "query": "tag:#done tag:#этап4  ",
+      "color": {
+        "a": 1,
+        "rgb": 13411072
+      }
+    },
+    {
+      "query": "tag:#draft tag:#этап4  ",
+      "color": {
+        "a": 1,
+        "rgb": 15057721
+      }
+    },
+    {
+      "query": "tag:#todo tag:#этап4  ",
+      "color": {
+        "a": 1,
+        "rgb": 16770431
+      }
+    },
+    {
+      "query": "tag:#done tag:#этап5  ",
+      "color": {
+        "a": 1,
+        "rgb": 13390080
+      }
+    },
+    {
+      "query": "tag:#draft tag:#этап5  ",
+      "color": {
+        "a": 1,
+        "rgb": 15040057
+      }
+    },
+    {
+      "query": "tag:#todo tag:#этап5  ",
+      "color": {
+        "a": 1,
+        "rgb": 16757375
+      }
+    },
+    {
+      "query": "tag:#done tag:#этап6  ",
+      "color": {
+        "a": 1,
+        "rgb": 13369344
+      }
+    },
+    {
+      "query": "tag:#draft tag:#этап6",
+      "color": {
+        "a": 1,
+        "rgb": 15040057
+      }
+    },
+    {
+      "query": "tag:#todo tag:#этап6  ",
+      "color": {
+        "a": 1,
+        "rgb": 16744319
       }
     }
   ],
@@ -60,6 +144,6 @@
   "repelStrength": 15.1041666666667,
   "linkStrength": 0.630208333333333,
   "linkDistance": 500,
-  "scale": 0.25883865621817026,
+  "scale": 0.1316872427983585,
   "close": true
 }
