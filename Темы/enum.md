@@ -28,3 +28,62 @@ enum ErrorCode : ushort
 ```
 
 Определить методы внутри перечисления нельзя, используйте для этого [методы расширения](Методы%20расширения.md).
+
+Значение по умолчанию для перечисления `E` - это значение, получаемое в результате `(E)0`, даже если 0 не имеет соответствующего элемента перечисления.
+
+# перечисления как битовые флаги
+
+Чтобы сделать так, чтобы тип перечисления обозначал комбинацию выборов, определите элементы перечисления так, чтобы связанные значения были степенями 2. Так, можно будет использовать [[Побитовые операторы]], чтобы объединить выборы или найти пересечения. Чтобы указать, что перечисление поддерживает битовые поля, добавьте ему `[Flags]` аттрибут. Кроме того, можно объявлять элементы перечисления, которые содержат комбинации
+
+```cs
+[Flags]
+public enum Days
+{
+    None      = 0b_0000_0000,  // 0
+    Monday    = 0b_0000_0001,  // 1
+    Tuesday   = 0b_0000_0010,  // 2
+    Wednesday = 0b_0000_0100,  // 4
+    Thursday  = 0b_0000_1000,  // 8
+    Friday    = 0b_0001_0000,  // 16
+    Saturday  = 0b_0010_0000,  // 32
+    Sunday    = 0b_0100_0000,  // 64
+    Weekend   = Saturday | Sunday
+}
+
+public class FlagsEnumExample
+{
+    public static void Main()
+    {
+        Days meetingDays = Days.Monday | Days.Wednesday | Days.Friday;
+        Console.WriteLine(meetingDays);
+        // Output:
+        // Monday, Wednesday, Friday
+
+        Days workingFromHomeDays = Days.Thursday | Days.Friday;
+        Console.WriteLine($"Join a meeting by phone on {meetingDays & workingFromHomeDays}");
+        // Output:
+        // Join a meeting by phone on Friday
+
+        bool isMeetingOnTuesday = (meetingDays & Days.Tuesday) == Days.Tuesday;
+        Console.WriteLine($"Is there a meeting on Tuesday: {isMeetingOnTuesday}");
+        // Output:
+        // Is there a meeting on Tuesday: False
+
+        var a = (Days)37;
+        Console.WriteLine(a);
+        // Output:
+        // Monday, Wednesday, Saturday
+    }
+}
+```
+
+# тип `System.Enum` и ограничение `enum`
+
+`System.Enum` - базовый класс всех перечислений. Он предоставляет набор методов для получения информации о типе перечисления и его значениях.
+
+Можно использовать `System.Enum` как ограничение базового типа, чтобы указать, что параметр типа - перечисление. Любое перечисление так же соответствует ограничению `struct`, которое гарантирует, что параметр типа - non-nullable значимый тип.
+
+# Конвертация
+
+Для каждого перечисления существует явная конвертация между типом перечисления и базовым целочисленным типом. Если сконвертировать значение перечисления в базовый тип результатом будет связанное целочисленное значение.
+
