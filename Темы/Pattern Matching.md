@@ -1,7 +1,6 @@
 ---
-tags:
-  - draft
-  - этап1
+stage: 1
+status: draft
 ---
 
 Выражение `is`, оператор `switch` и выражение `switch`
