@@ -20,4 +20,6 @@ views:
     sort:
       - property: stage
         direction: ASC
-    columnSize: {}
+    columnSize:
+      file.name: 348
+      note.status: 401
