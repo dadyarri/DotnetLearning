@@ -1,7 +1,6 @@
 ---
-tags:
-  - этап1
-  - done
+stage: 1
+status: done
 ---
 Тип `string` представляет собой последовательность из нуля или больше Unicode символов. `string` - алиас для `System.String` в .NET.
 

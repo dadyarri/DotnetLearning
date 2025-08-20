@@ -1,5 +1,4 @@
 ---
-tags:
-  - этап6
-  - todo
+stage: 6
+status: todo
 ---

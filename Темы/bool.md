@@ -1,7 +1,6 @@
 ---
-tags:
-  - этап1
-  - done
+stage: 1
+status: done
 ---
 `bool` — Алиас для структурного значимого типа `System.Boolean`, который может принимать значения `true`/`false`.
 

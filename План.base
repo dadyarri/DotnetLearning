@@ -1,0 +1,23 @@
+properties:
+  file.name:
+    displayName: Тема
+  note.stage:
+    displayName: Этап
+  note.status:
+    displayName: Статус
+views:
+  - type: table
+    name: Table
+    filters:
+      and:
+        - file.inFolder("Темы")
+        - file.hasProperty("status")
+        - file.hasProperty("stage")
+    order:
+      - file.name
+      - status
+      - stage
+    sort:
+      - property: stage
+        direction: ASC
+    columnSize: {}

@@ -1,7 +1,6 @@
 ---
-tags:
-  - этап1
-  - done
+stage: 1
+status: done
 ---
 # боксинг
 
