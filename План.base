@@ -7,12 +7,33 @@ properties:
     displayName: Статус
 views:
   - type: table
-    name: Table
+    name: All topics
     filters:
       and:
         - file.inFolder("Темы")
         - file.hasProperty("status")
         - file.hasProperty("stage")
+    order:
+      - file.name
+      - status
+      - stage
+    sort:
+      - property: stage
+        direction: ASC
+    columnSize:
+      file.name: 348
+      note.status: 401
+  - type: table
+    name: Unfinished topics of current stage
+    filters:
+      and:
+        - file.inFolder("Темы")
+        - file.hasProperty("status")
+        - file.hasProperty("stage")
+        - or:
+            - status == "todo"
+            - status == "draft"
+        - stage == 1
     order:
       - file.name
       - status
