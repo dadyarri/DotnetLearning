@@ -1,6 +1,6 @@
 ---
 stage: 1
-status: draft
+status: done
 ---
 # Интерфейсы (до C# 8)
 
