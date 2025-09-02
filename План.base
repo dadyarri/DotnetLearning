@@ -33,7 +33,7 @@ views:
         - or:
             - status == "todo"
             - status == "draft"
-        - stage == 1
+        - stage == 2
     order:
       - file.name
       - status
