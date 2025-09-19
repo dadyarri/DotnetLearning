@@ -2,3 +2,4 @@
 stage: 2
 status: todo
 ---
+Многие методы LINQ не выполняются сразу, а дают `IEnumerable`, который можно материализовать позднее (в `foreach` или `.ToList()`/`.ToArray()`).
